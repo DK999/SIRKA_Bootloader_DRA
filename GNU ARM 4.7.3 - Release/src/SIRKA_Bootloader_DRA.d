@@ -47,8 +47,8 @@ src/SIRKA_Bootloader_DRA.o: ../src/SIRKA_Bootloader_DRA.c \
  C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/emlib/inc/em_msc.h \
  C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/emlib/inc/em_bitband.h \
  ../src/write_to_flash.h ../src/msc.h ../src/watchdog.h ../src/emu.h \
- ../src/crc.h ../src/usart.h ../src/boot.h ../src/ramfunc.h ../src/init.h \
- ../src/irq.h ../src/timer.h
+ ../src/crc.h ../src/usart.h ../src/status.h ../src/boot.h \
+ ../src/ramfunc.h ../src/init.h ../src/irq.h ../src/timer.h
 
 C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include/efm32tg110f32.h:
 
@@ -155,6 +155,8 @@ C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/emlib/inc/em_bitband.
 ../src/crc.h:
 
 ../src/usart.h:
+
+../src/status.h:
 
 ../src/boot.h:
 

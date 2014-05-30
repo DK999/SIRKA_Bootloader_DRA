@@ -15,14 +15,13 @@
 #include "emu.h"
 #include "crc.h"
 #include "usart.h"
+#include "status.h"
 
 void flash_device();
 uint8_t check_firmware();
 void get_nr_of_packages();
-void send_ok();
 void write_to_flash();
 void wait_for_package();
-void send_crc_fail();
 int check_crc();
 
 #endif /* WRITE_TO_FLASH_H_ */

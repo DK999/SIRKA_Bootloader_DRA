@@ -24,8 +24,7 @@
 
 uint32_t address = 0x4000;						// Stores address for flash writing
 uint16_t nr_of_packages = 0;					// Stores number of packages
-uint8_t finished[5]={0xAA,0xAA,0x05,0x00,0x01};	// Sends if succeeds
-uint8_t failed[5]={0xAA,0xAA,0x05,0x00,0x00};	// Sends if CRC fails
+
 extern uint8_t received_frame[14];				// Reveived frame by USART
 extern short frame_position;					// Points at current frame position
 
@@ -144,22 +143,7 @@ void get_nr_of_packages()
 	nr_of_packages |= received_frame[4];
 
 }
-/* Sends success message */
-void send_ok()
-{
-	GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
-	for ( int i = 0; i < 5 ; i++)
-		USART0_send(finished[i]);
-	GPIO->P[USART_CS_PORT].DOUTCLR = (1 << USART_CS_PIN);
-}
-/* Sends failure message */
-void send_crc_fail()
-{
-	GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
-	for ( int i = 0; i < 5 ; i++)
-		USART0_send(failed[i]);
-	GPIO->P[USART_CS_PORT].DOUTCLR = (1 << USART_CS_PIN);
-}
+
 /* Writes to flash */
 void write_to_flash()
 {	/* Delete preamble, overwrite with information */

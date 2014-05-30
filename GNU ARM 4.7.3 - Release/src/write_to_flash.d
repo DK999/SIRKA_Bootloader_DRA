@@ -40,7 +40,8 @@ src/write_to_flash.o: ../src/write_to_flash.c ../src/write_to_flash.h \
  C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include/efm32tg_dmactrl.h \
  C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include/efm32tg_af_ports.h \
  C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include/efm32tg_af_pins.h \
- ../src/msc.h ../src/watchdog.h ../src/emu.h ../src/crc.h ../src/usart.h
+ ../src/msc.h ../src/watchdog.h ../src/emu.h ../src/crc.h ../src/usart.h \
+ ../src/status.h
 
 ../src/write_to_flash.h:
 
@@ -135,3 +136,5 @@ C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EF
 ../src/crc.h:
 
 ../src/usart.h:
+
+../src/status.h:

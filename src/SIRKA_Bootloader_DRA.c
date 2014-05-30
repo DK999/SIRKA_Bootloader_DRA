@@ -17,6 +17,7 @@
 #include "boot.h"
 #include "init.h"
 #include "usart.h"
+#include "status.h"
 
 #define USART_CS_PORT 2
 #define USART_CS_PIN 14
@@ -117,6 +118,9 @@ int main(void)
 	  										BOOT_boot();
 	  									else
 	  										USART0_sendString("Firmware INVALID!!\n\r");
+	  									break;
+
+	  						case 0x14:	send_hello();
 	  									break;
 
 	  						default:
