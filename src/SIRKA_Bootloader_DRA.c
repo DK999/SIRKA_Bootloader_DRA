@@ -31,8 +31,8 @@
 #define CRCL 6
 #define CRCH 7
 
-uint8_t received_frame[14];
-short frame_position;
+volatile uint8_t received_frame[14];
+volatile short frame_position;
 void sendWelcomeMessage(void)
 { GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
   if (RMU->RSTCAUSE & (0x01 << 4))
