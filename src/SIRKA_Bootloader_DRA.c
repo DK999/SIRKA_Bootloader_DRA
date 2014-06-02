@@ -33,7 +33,6 @@
 
 uint8_t received_frame[14];
 short frame_position;
-
 void sendWelcomeMessage(void)
 { GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
   if (RMU->RSTCAUSE & (0x01 << 4))
@@ -55,7 +54,7 @@ void sendVerify(uint8_t check_value)
   USART0_sendString("Firmware VALID!\n\r");
   else
   USART0_sendString("Firmware INVALID!!\n\r");
-  GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
+  GPIO->P[USART_CS_PORT].DOUTCLR = (1 << USART_CS_PIN);
 }
 
 /**************************************************************************//**
@@ -76,11 +75,11 @@ int main(void)
 
   if(*boot_flag == 0x00 && check_firmware() == 0x01 )
 	  BOOT_boot();
-
+  sendWelcomeMessage();
   /* Infinite loop */
   while (1)
   {
-	  sendWelcomeMessage();
+
 	  wait_for_package();
 	  //  		  crc = 0x0000;
 	  //  		  for(int i = 0; i < (received_frame[LENGTH]-2) ; i++)
@@ -123,7 +122,12 @@ int main(void)
 	  									}
 
 	  									else
+	  									{
+	  										GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
 	  										USART0_sendString("Firmware INVALID!!\n\r");
+	  										GPIO->P[USART_CS_PORT].DOUTCLR = (1 << USART_CS_PIN);
+	  									}
+
 	  									break;
 
 	  						case 0x14:	send_hello();
