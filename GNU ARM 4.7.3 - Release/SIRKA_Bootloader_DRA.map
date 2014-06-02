@@ -41,7 +41,7 @@ Discarded input sections
  .text          0x00000000        0x0 ./src/crc.o
  .data          0x00000000        0x0 ./src/crc.o
  .bss           0x00000000        0x0 ./src/crc.o
- .text.crcInit  0x00000000       0x9c ./src/crc.o
+ .text.crcInit  0x00000000       0x80 ./src/crc.o
  COMMON         0x00000000      0x200 ./src/crc.o
  .text          0x00000000        0x0 ./src/emu.o
  .data          0x00000000        0x0 ./src/emu.o
@@ -65,7 +65,7 @@ Discarded input sections
  .data          0x00000000        0x0 ./src/usart.o
  .bss           0x00000000        0x0 ./src/usart.o
  .text.USART0_receive
-                0x00000000       0x20 ./src/usart.o
+                0x00000000       0x2c ./src/usart.o
  .text          0x00000000        0x0 ./src/watchdog.o
  .data          0x00000000        0x0 ./src/watchdog.o
  .bss           0x00000000        0x0 ./src/watchdog.o
@@ -76,46 +76,48 @@ Discarded input sections
  .data          0x00000000        0x0 ./emlib/em_system.o
  .bss           0x00000000        0x0 ./emlib/em_system.o
  .text.SYSTEM_ChipRevisionGet
-                0x00000000       0x24 ./emlib/em_system.o
+                0x00000000       0x5c ./emlib/em_system.o
  .text.SYSTEM_GetCalibrationValue
-                0x00000000       0x98 ./emlib/em_system.o
- .debug_info    0x00000000      0x239 ./emlib/em_system.o
+                0x00000000       0x5c ./emlib/em_system.o
+ .debug_info    0x00000000      0x237 ./emlib/em_system.o
  .debug_abbrev  0x00000000       0xef ./emlib/em_system.o
- .debug_loc     0x00000000      0x176 ./emlib/em_system.o
+ .debug_loc     0x00000000       0x70 ./emlib/em_system.o
  .debug_aranges
                 0x00000000       0x28 ./emlib/em_system.o
  .debug_ranges  0x00000000       0x18 ./emlib/em_system.o
- .debug_line    0x00000000      0x258 ./emlib/em_system.o
+ .debug_line    0x00000000      0x23f ./emlib/em_system.o
  .debug_str     0x00000000      0x237 ./emlib/em_system.o
  .comment       0x00000000       0x71 ./emlib/em_system.o
  .ARM.attributes
                 0x00000000       0x33 ./emlib/em_system.o
- .debug_frame   0x00000000       0x38 ./emlib/em_system.o
+ .debug_frame   0x00000000       0x48 ./emlib/em_system.o
  .data          0x00000000        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
  .bss           0x00000000        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
  .text          0x00000000        0x0 ./CMSIS/efm32tg/system_efm32tg.o
  .data          0x00000000        0x0 ./CMSIS/efm32tg/system_efm32tg.o
  .bss           0x00000000        0x0 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemHFClockGet
-                0x00000000       0xf4 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemCoreClockGet
-                0x00000000       0x24 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemHFXOClockGet
-                0x00000000        0xc ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemHFXOClockSet
-                0x00000000       0x24 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemLFRCOClockGet
-                0x00000000        0x8 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemULFRCOClockGet
-                0x00000000        0x8 ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemLFXOClockGet
-                0x00000000        0xc ./CMSIS/efm32tg/system_efm32tg.o
- .text.SystemLFXOClockSet
-                0x00000000       0x24 ./CMSIS/efm32tg/system_efm32tg.o
- .data.SystemLFXOClock
-                0x00000000        0x4 ./CMSIS/efm32tg/system_efm32tg.o
  .data.SystemHFXOClock
                 0x00000000        0x4 ./CMSIS/efm32tg/system_efm32tg.o
+ .data.SystemLFXOClock
+                0x00000000        0x4 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.GetProdRev
+                0x00000000       0x1c ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemCoreClockGet
+                0x00000000       0x3c ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemHFClockGet
+                0x00000000      0x110 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemHFXOClockGet
+                0x00000000       0x18 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemHFXOClockSet
+                0x00000000       0x34 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemLFRCOClockGet
+                0x00000000       0x10 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemULFRCOClockGet
+                0x00000000       0x10 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemLFXOClockGet
+                0x00000000       0x18 ./CMSIS/efm32tg/system_efm32tg.o
+ .text.SystemLFXOClockSet
+                0x00000000       0x34 ./CMSIS/efm32tg/system_efm32tg.o
  COMMON         0x00000000        0x4 ./CMSIS/efm32tg/system_efm32tg.o
  .text          0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
  .data          0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
@@ -187,7 +189,7 @@ END GROUP
 LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
 LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
 
-.text           0x00000000     0x102c
+.text           0x00000000     0x14d0
  *(.isr_vector)
  .isr_vector    0x00000000      0x100 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
                 0x00000000                __isr_vector
@@ -197,172 +199,183 @@ LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/
                 0x00000154                _start
                 0x00000154                start
                 0x00000154                _mainCRTStartup
+ .text.CHIP_Init
+                0x000001c4        0xc ./src/SIRKA_Bootloader_DRA.o
  .text.sendWelcomeMessage
-                0x000001c4       0x64 ./src/SIRKA_Bootloader_DRA.o
-                0x000001c4                sendWelcomeMessage
+                0x000001d0       0x68 ./src/SIRKA_Bootloader_DRA.o
+                0x000001d0                sendWelcomeMessage
  .text.sendVerify
-                0x00000228       0x3c ./src/SIRKA_Bootloader_DRA.o
-                0x00000228                sendVerify
- .text.main     0x00000264       0xec ./src/SIRKA_Bootloader_DRA.o
-                0x00000264                main
+                0x00000238       0x50 ./src/SIRKA_Bootloader_DRA.o
+                0x00000238                sendVerify
+ .text.main     0x00000288      0x128 ./src/SIRKA_Bootloader_DRA.o
+                0x00000288                main
  .text.BOOT_jump
-                0x00000350        0xc ./src/boot.o
-                0x00000350                BOOT_jump
+                0x000003b0       0x20 ./src/boot.o
+                0x000003b0                BOOT_jump
  .text.BOOT_boot
-                0x0000035c       0x1c ./src/boot.o
-                0x0000035c                BOOT_boot
- .text.CRC16    0x00000378       0x18 ./src/crc.o
-                0x00000378                CRC16
+                0x000003d0       0x34 ./src/boot.o
+                0x000003d0                BOOT_boot
+ .text.CRC16    0x00000404       0x44 ./src/crc.o
+                0x00000404                CRC16
  .text.EMU_EnterEM1
-                0x00000390       0x14 ./src/emu.o
-                0x00000390                EMU_EnterEM1
+                0x00000448       0x24 ./src/emu.o
+                0x00000448                EMU_EnterEM1
+ .text.NVIC_EnableIRQ
+                0x0000046c       0x38 ./src/init.o
  .text.Init_USART0
-                0x000003a4       0x24 ./src/init.o
-                0x000003a4                Init_USART0
+                0x000004a4       0x44 ./src/init.o
+                0x000004a4                Init_USART0
  .text.Init_Clocks
-                0x000003c8       0x58 ./src/init.o
-                0x000003c8                Init_Clocks
+                0x000004e8       0x9c ./src/init.o
+                0x000004e8                Init_Clocks
  .text.Init_GPIO
-                0x00000420       0x54 ./src/init.o
-                0x00000420                Init_GPIO
- .text.Init_WD  0x00000474       0x18 ./src/init.o
-                0x00000474                Init_WD
+                0x00000584       0x64 ./src/init.o
+                0x00000584                Init_GPIO
+ .text.Init_WD  0x000005e8       0x28 ./src/init.o
+                0x000005e8                Init_WD
  .text.Init_TIMER0
-                0x0000048c       0x2c ./src/init.o
-                0x0000048c                Init_TIMER0
+                0x00000610       0x38 ./src/init.o
+                0x00000610                Init_TIMER0
  .text.Init_Interrupts
-                0x000004b8        0x8 ./src/init.o
-                0x000004b8                Init_Interrupts
+                0x00000648        0xc ./src/init.o
+                0x00000648                Init_Interrupts
+ .text.NVIC_EnableIRQ
+                0x00000654       0x38 ./src/irq.o
+ .text.NVIC_ClearPendingIRQ
+                0x0000068c       0x3c ./src/irq.o
  .text.enable_interrupts
-                0x000004c0       0x24 ./src/irq.o
-                0x000004c0                enable_interrupts
+                0x000006c8       0x30 ./src/irq.o
+                0x000006c8                enable_interrupts
  .text.USART0_RX_IRQHandler
-                0x000004e4       0x4c ./src/irq.o
-                0x000004e4                USART0_RX_IRQHandler
+                0x000006f8       0x6c ./src/irq.o
+                0x000006f8                USART0_RX_IRQHandler
  .text.TIMER0_IRQHandler
-                0x00000530       0x28 ./src/irq.o
-                0x00000530                TIMER0_IRQHandler
+                0x00000764       0x2c ./src/irq.o
+                0x00000764                TIMER0_IRQHandler
  .text.ErasePage
-                0x00000558       0xd4 ./src/msc.o
-                0x00000558                ErasePage
- .text.LoadData
-                0x0000062c      0x108 ./src/msc.o
-                0x0000062c                LoadData
- .text.LoadAddress
-                0x00000734       0x3c ./src/msc.o
-                0x00000734                LoadAddress
+                0x00000790      0x124 ./src/msc.o
+                0x00000790                ErasePage
  .text.WriteWord
-                0x00000770       0xe0 ./src/msc.o
-                0x00000770                WriteWord
+                0x000008b4       0xf8 ./src/msc.o
+                0x000008b4                WriteWord
+ .text.LoadData
+                0x000009ac       0xd4 ./src/msc.o
+                0x000009ac                LoadData
+ .text.LoadAddress
+                0x00000a80       0x6c ./src/msc.o
+                0x00000a80                LoadAddress
  .text.send_hello
-                0x00000850       0xe4 ./src/status.o
-                0x00000850                send_hello
- .text.send_ok  0x00000934       0x44 ./src/status.o
-                0x00000934                send_ok
+                0x00000aec       0xb0 ./src/status.o
+                0x00000aec                send_hello
+ .text.send_ok  0x00000b9c       0x54 ./src/status.o
+                0x00000b9c                send_ok
  .text.send_crc_fail
-                0x00000978       0x44 ./src/status.o
-                0x00000978                send_crc_fail
+                0x00000bf0       0x54 ./src/status.o
+                0x00000bf0                send_crc_fail
  .text.TIMER_start
-                0x000009bc       0x10 ./src/timer.o
-                0x000009bc                TIMER_start
+                0x00000c44       0x18 ./src/timer.o
+                0x00000c44                TIMER_start
  .text.TIMER_stop
-                0x000009cc       0x18 ./src/timer.o
-                0x000009cc                TIMER_stop
+                0x00000c5c       0x28 ./src/timer.o
+                0x00000c5c                TIMER_stop
  .text.TIMER_intclear
-                0x000009e4       0x10 ./src/timer.o
-                0x000009e4                TIMER_intclear
+                0x00000c84       0x18 ./src/timer.o
+                0x00000c84                TIMER_intclear
  .text.USART0_send
-                0x000009f4       0x2c ./src/usart.o
-                0x000009f4                USART0_send
+                0x00000c9c       0x48 ./src/usart.o
+                0x00000c9c                USART0_send
  .text.USART0_sendString
-                0x00000a20       0x18 ./src/usart.o
-                0x00000a20                USART0_sendString
- .text.WDOG_Feed
-                0x00000a38       0x40 ./src/watchdog.o
-                0x00000a38                WDOG_Feed
- .text.BITBAND_Peripheral
-                0x00000a78       0x10 ./src/watchdog.o
-                0x00000a78                BITBAND_Peripheral
+                0x00000ce4       0x30 ./src/usart.o
+                0x00000ce4                USART0_sendString
  .text.WDOG_Enable
-                0x00000a88       0x28 ./src/watchdog.o
-                0x00000a88                WDOG_Enable
- .text.check_firmware
-                0x00000ab0      0x120 ./src/write_to_flash.o
-                0x00000ab0                check_firmware
- .text.write_to_flash
-                0x00000bd0       0x6c ./src/write_to_flash.o
-                0x00000bd0                write_to_flash
- .text.wait_for_package
-                0x00000c3c       0x38 ./src/write_to_flash.o
-                0x00000c3c                wait_for_package
- .text.get_nr_of_packages
-                0x00000c74       0x24 ./src/write_to_flash.o
-                0x00000c74                get_nr_of_packages
- .text.check_crc
-                0x00000c98       0x94 ./src/write_to_flash.o
-                0x00000c98                check_crc
+                0x00000d14       0x48 ./src/watchdog.o
+                0x00000d14                WDOG_Enable
+ .text.WDOG_Feed
+                0x00000d5c       0x58 ./src/watchdog.o
+                0x00000d5c                WDOG_Feed
+ .text.BITBAND_Peripheral
+                0x00000db4       0x30 ./src/watchdog.o
+                0x00000db4                BITBAND_Peripheral
  .text.flash_device
-                0x00000d2c       0xc0 ./src/write_to_flash.o
-                0x00000d2c                flash_device
- .text          0x00000dec       0x78 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
-                0x00000dec                Reset_Handler
-                0x00000e20                Default_Handler
-                0x00000e22                NMI_Handler
-                0x00000e24                HardFault_Handler
-                0x00000e26                MemManage_Handler
-                0x00000e28                BusFault_Handler
-                0x00000e2a                UsageFault_Handler
-                0x00000e2c                SVC_Handler
-                0x00000e2e                DebugMon_Handler
-                0x00000e30                PendSV_Handler
-                0x00000e32                SysTick_Handler
-                0x00000e34                DMA_IRQHandler
-                0x00000e36                GPIO_EVEN_IRQHandler
-                0x00000e3c                USART0_TX_IRQHandler
-                0x00000e3e                ACMP0_IRQHandler
-                0x00000e40                ADC0_IRQHandler
-                0x00000e42                DAC0_IRQHandler
-                0x00000e44                I2C0_IRQHandler
-                0x00000e46                GPIO_ODD_IRQHandler
-                0x00000e48                TIMER1_IRQHandler
-                0x00000e4a                USART1_RX_IRQHandler
-                0x00000e4c                USART1_TX_IRQHandler
-                0x00000e4e                LESENSE_IRQHandler
-                0x00000e50                LEUART0_IRQHandler
-                0x00000e52                LETIMER0_IRQHandler
-                0x00000e54                PCNT0_IRQHandler
-                0x00000e56                RTC_IRQHandler
-                0x00000e58                CMU_IRQHandler
-                0x00000e5a                VCMP_IRQHandler
-                0x00000e5c                LCD_IRQHandler
-                0x00000e5e                MSC_IRQHandler
-                0x00000e60                AES_IRQHandler
+                0x00000de4      0x124 ./src/write_to_flash.o
+                0x00000de4                flash_device
+ .text.check_firmware
+                0x00000f08       0x78 ./src/write_to_flash.o
+                0x00000f08                check_firmware
+ .text.reset_bootflag
+                0x00000f80      0x114 ./src/write_to_flash.o
+                0x00000f80                reset_bootflag
+ .text.get_nr_of_packages
+                0x00001094       0x60 ./src/write_to_flash.o
+                0x00001094                get_nr_of_packages
+ .text.write_to_flash
+                0x000010f4       0xac ./src/write_to_flash.o
+                0x000010f4                write_to_flash
+ .text.wait_for_package
+                0x000011a0       0x44 ./src/write_to_flash.o
+                0x000011a0                wait_for_package
+ .text.check_crc
+                0x000011e4       0xa4 ./src/write_to_flash.o
+                0x000011e4                check_crc
+ .text          0x00001288       0x78 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+                0x00001288                Reset_Handler
+                0x000012bc                Default_Handler
+                0x000012be                NMI_Handler
+                0x000012c0                HardFault_Handler
+                0x000012c2                MemManage_Handler
+                0x000012c4                BusFault_Handler
+                0x000012c6                UsageFault_Handler
+                0x000012c8                SVC_Handler
+                0x000012ca                DebugMon_Handler
+                0x000012cc                PendSV_Handler
+                0x000012ce                SysTick_Handler
+                0x000012d0                DMA_IRQHandler
+                0x000012d2                GPIO_EVEN_IRQHandler
+                0x000012d8                USART0_TX_IRQHandler
+                0x000012da                ACMP0_IRQHandler
+                0x000012dc                ADC0_IRQHandler
+                0x000012de                DAC0_IRQHandler
+                0x000012e0                I2C0_IRQHandler
+                0x000012e2                GPIO_ODD_IRQHandler
+                0x000012e4                TIMER1_IRQHandler
+                0x000012e6                USART1_RX_IRQHandler
+                0x000012e8                USART1_TX_IRQHandler
+                0x000012ea                LESENSE_IRQHandler
+                0x000012ec                LEUART0_IRQHandler
+                0x000012ee                LETIMER0_IRQHandler
+                0x000012f0                PCNT0_IRQHandler
+                0x000012f2                RTC_IRQHandler
+                0x000012f4                CMU_IRQHandler
+                0x000012f6                VCMP_IRQHandler
+                0x000012f8                LCD_IRQHandler
+                0x000012fa                MSC_IRQHandler
+                0x000012fc                AES_IRQHandler
  .text.SystemInit
-                0x00000e64        0x4 ./CMSIS/efm32tg/system_efm32tg.o
-                0x00000e64                SystemInit
+                0x00001300        0xc ./CMSIS/efm32tg/system_efm32tg.o
+                0x00001300                SystemInit
  .text.__register_exitproc
-                0x00000e68       0x14 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
-                0x00000e68                __register_exitproc
- .text.exit     0x00000e7c       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
-                0x00000e7c                exit
+                0x0000130c       0x14 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
+                0x0000130c                __register_exitproc
+ .text.exit     0x00001320       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
+                0x00001320                exit
  .text.__libc_fini_array
-                0x00000ea8       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-fini.o)
-                0x00000ea8                __libc_fini_array
+                0x0000134c       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-fini.o)
+                0x0000134c                __libc_fini_array
  .text.__libc_init_array
-                0x00000ed4       0x4c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
-                0x00000ed4                __libc_init_array
- .text.memset   0x00000f20       0x10 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
-                0x00000f20                memset
- .text._exit    0x00000f30        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
-                0x00000f30                _exit
+                0x00001378       0x4c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
+                0x00001378                __libc_init_array
+ .text.memset   0x000013c4       0x10 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
+                0x000013c4                memset
+ .text._exit    0x000013d4        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+                0x000013d4                _exit
  *(.init)
- .init          0x00000f34        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x00000f34                _init
- .init          0x00000f38        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+ .init          0x000013d8        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x000013d8                _init
+ .init          0x000013dc        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
  *(.fini)
- .fini          0x00000f40        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
-                0x00000f40                _fini
- .fini          0x00000f44        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
+ .fini          0x000013e4        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crti.o
+                0x000013e4                _fini
+ .fini          0x000013e8        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -374,47 +387,46 @@ LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata*)
- .rodata.str1.4
-                0x00000f4c       0xd4 ./src/SIRKA_Bootloader_DRA.o
+ .rodata        0x000013f0       0xd4 ./src/SIRKA_Bootloader_DRA.o
  .rodata.str1.1
-                0x00001020        0x2 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
- *fill*         0x00001022        0x2 00
+                0x000014c4        0x2 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+ *fill*         0x000014c6        0x2 00
  .rodata._global_impure_ptr
-                0x00001024        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
-                0x00001024                _global_impure_ptr
+                0x000014c8        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+                0x000014c8                _global_impure_ptr
  *(.eh_frame*)
- .eh_frame      0x00001028        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
- .eh_frame      0x00001028        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
+ .eh_frame      0x000014cc        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .eh_frame      0x000014cc        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtend.o
 
-.glue_7         0x0000102c        0x0
+.glue_7         0x000014d0        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x0000102c        0x0
+.glue_7t        0x000014d0        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000102c        0x0
+.vfp11_veneer   0x000014d0        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x0000102c        0x0
+.v4_bx          0x000014d0        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x0000102c        0x0
+.iplt           0x000014d0        0x0
  .iplt          0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000102c                __exidx_start = .
+                0x000014d0                __exidx_start = .
 
-.ARM.exidx      0x0000102c        0x8
+.ARM.exidx      0x000014d0        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0000102c        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
-                0x00001034                __exidx_end = .
-                0x00001034                __etext = .
+ .ARM.exidx     0x000014d0        0x8 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m/crt0.o
+                0x000014d8                __exidx_end = .
+                0x000014d8                __etext = .
 
-.rel.dyn        0x00001034        0x0
+.rel.dyn        0x000014d8        0x0
  .rel.iplt      0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.data           0x20000000      0x280 load address 0x00001034
+.data           0x20000000      0x298 load address 0x000014d8
                 0x20000000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -428,60 +440,76 @@ LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/
                 0x20000208                failed
  .data.address  0x20000210        0x4 ./src/write_to_flash.o
                 0x20000210                address
+ .data.sirka_address
+                0x20000214        0x4 ./src/write_to_flash.o
+                0x20000214                sirka_address
+ .data.acc_res  0x20000218        0x4 ./src/write_to_flash.o
+                0x20000218                acc_res
+ .data.gyro_res
+                0x2000021c        0x4 ./src/write_to_flash.o
+                0x2000021c                gyro_res
+ .data.mag_res  0x20000220        0x4 ./src/write_to_flash.o
+                0x20000220                mag_res
+ .data.crc_pack
+                0x20000224        0x4 ./src/write_to_flash.o
+                0x20000224                crc_pack
+ .data.file_size
+                0x20000228        0x4 ./src/write_to_flash.o
+                0x20000228                file_size
  .data.impure_data
-                0x20000214       0x64 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
-                0x20000278                . = ALIGN (0x4)
+                0x2000022c       0x64 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-impure.o)
+                0x20000290                . = ALIGN (0x4)
  *(.ram)
-                0x20000278                . = ALIGN (0x4)
-                0x20000278                PROVIDE (__preinit_array_start, .)
+                0x20000290                . = ALIGN (0x4)
+                0x20000290                PROVIDE (__preinit_array_start, .)
  *(.preinit_array)
-                0x20000278                PROVIDE (__preinit_array_end, .)
-                0x20000278                . = ALIGN (0x4)
-                0x20000278                PROVIDE (__init_array_start, .)
+                0x20000290                PROVIDE (__preinit_array_end, .)
+                0x20000290                . = ALIGN (0x4)
+                0x20000290                PROVIDE (__init_array_start, .)
  *(SORT(.init_array.*))
  *(.init_array)
- .init_array    0x20000278        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
-                0x2000027c                PROVIDE (__init_array_end, .)
-                0x2000027c                . = ALIGN (0x4)
-                0x2000027c                PROVIDE (__fini_array_start, .)
+ .init_array    0x20000290        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+                0x20000294                PROVIDE (__init_array_end, .)
+                0x20000294                . = ALIGN (0x4)
+                0x20000294                PROVIDE (__fini_array_start, .)
  *(SORT(.fini_array.*))
  *(.fini_array)
- .fini_array    0x2000027c        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
-                0x20000280                PROVIDE (__fini_array_end, .)
-                0x20000280                . = ALIGN (0x4)
-                0x20000280                __data_end__ = .
+ .fini_array    0x20000294        0x4 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+                0x20000298                PROVIDE (__fini_array_end, .)
+                0x20000298                . = ALIGN (0x4)
+                0x20000298                __data_end__ = .
 
-.jcr            0x20000280        0x0 load address 0x000012b4
- .jcr           0x20000280        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+.jcr            0x20000298        0x0 load address 0x00001770
+ .jcr           0x20000298        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.igot.plt       0x20000280        0x0 load address 0x000012b4
+.igot.plt       0x20000298        0x0 load address 0x00001770
  .igot.plt      0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.bss            0x20000280       0x32 load address 0x000012b4
-                0x20000280                __bss_start__ = .
+.bss            0x20000298       0x32 load address 0x00001770
+                0x20000298                __bss_start__ = .
  *(.bss*)
- .bss           0x20000280       0x1c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
+ .bss           0x20000298       0x1c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
  .bss.nr_of_packages
-                0x2000029c        0x2 ./src/write_to_flash.o
-                0x2000029c                nr_of_packages
+                0x200002b4        0x2 ./src/write_to_flash.o
+                0x200002b4                nr_of_packages
  *(COMMON)
- *fill*         0x2000029e        0x2 00
- COMMON         0x200002a0       0x12 ./src/SIRKA_Bootloader_DRA.o
-                0x200002a0                frame_position
-                0x200002a4                received_frame
-                0x200002b2                __bss_end__ = .
+ *fill*         0x200002b6        0x2 00
+ COMMON         0x200002b8       0x12 ./src/SIRKA_Bootloader_DRA.o
+                0x200002b8                frame_position
+                0x200002bc                received_frame
+                0x200002ca                __bss_end__ = .
 
-.heap           0x200002b8        0x0
-                0x200002b8                __end__ = .
-                0x200002b8                end = __end__
-                0x200002b8                _end = __end__
+.heap           0x200002d0        0x0
+                0x200002d0                __end__ = .
+                0x200002d0                end = __end__
+                0x200002d0                _end = __end__
  *(.heap*)
- .heap          0x200002b8        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
-                0x200002b8                __HeapLimit = .
+ .heap          0x200002d0        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+                0x200002d0                __HeapLimit = .
 
-.stack_dummy    0x200002b8      0x400
+.stack_dummy    0x200002d0      0x400
  *(.stack)
- .stack         0x200002b8      0x400 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .stack         0x200002d0      0x400 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
                 0x20001000                __StackTop = (ORIGIN (RAM) + 0x1000)
                 0x20000c00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x20001000                PROVIDE (__stack, __StackTop)
@@ -559,157 +587,159 @@ OUTPUT(SIRKA_Bootloader_DRA.axf elf32-littlearm)
  .comment       0x00000000       0x71 ./src/write_to_flash.o
  .comment       0x00000000       0x71 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_info     0x00000000     0x36a5
- .debug_info    0x00000000      0x5b5 ./src/SIRKA_Bootloader_DRA.o
- .debug_info    0x000005b5      0x2ef ./src/boot.o
- .debug_info    0x000008a4      0x14e ./src/crc.o
- .debug_info    0x000009f2      0x29d ./src/emu.o
- .debug_info    0x00000c8f      0xa5d ./src/init.o
- .debug_info    0x000016ec      0x55f ./src/irq.o
- .debug_info    0x00001c4b      0x3e8 ./src/msc.o
- .debug_info    0x00002033      0x4f4 ./src/status.o
- .debug_info    0x00002527      0x21d ./src/timer.o
- .debug_info    0x00002744      0x29a ./src/usart.o
- .debug_info    0x000029de      0x197 ./src/watchdog.o
- .debug_info    0x00002b75      0x4fa ./src/write_to_flash.o
- .debug_info    0x0000306f       0xa9 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
- .debug_info    0x00003118      0x58d ./CMSIS/efm32tg/system_efm32tg.o
+.debug_info     0x00000000     0x301e
+ .debug_info    0x00000000      0x3f9 ./src/SIRKA_Bootloader_DRA.o
+ .debug_info    0x000003f9      0x2e8 ./src/boot.o
+ .debug_info    0x000006e1      0x14b ./src/crc.o
+ .debug_info    0x0000082c      0x29e ./src/emu.o
+ .debug_info    0x00000aca      0xa3e ./src/init.o
+ .debug_info    0x00001508      0x4fd ./src/irq.o
+ .debug_info    0x00001a05      0x364 ./src/msc.o
+ .debug_info    0x00001d69      0x387 ./src/status.o
+ .debug_info    0x000020f0      0x220 ./src/timer.o
+ .debug_info    0x00002310      0x291 ./src/usart.o
+ .debug_info    0x000025a1      0x187 ./src/watchdog.o
+ .debug_info    0x00002728      0x2e9 ./src/write_to_flash.o
+ .debug_info    0x00002a11       0xa9 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .debug_info    0x00002aba      0x564 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_abbrev   0x00000000     0x10d1
- .debug_abbrev  0x00000000      0x1a2 ./src/SIRKA_Bootloader_DRA.o
- .debug_abbrev  0x000001a2      0x117 ./src/boot.o
- .debug_abbrev  0x000002b9       0xd7 ./src/crc.o
- .debug_abbrev  0x00000390       0xda ./src/emu.o
- .debug_abbrev  0x0000046a      0x199 ./src/init.o
- .debug_abbrev  0x00000603      0x196 ./src/irq.o
- .debug_abbrev  0x00000799      0x157 ./src/msc.o
- .debug_abbrev  0x000008f0      0x182 ./src/status.o
- .debug_abbrev  0x00000a72       0xad ./src/timer.o
- .debug_abbrev  0x00000b1f      0x103 ./src/usart.o
- .debug_abbrev  0x00000c22      0x12b ./src/watchdog.o
- .debug_abbrev  0x00000d4d      0x19a ./src/write_to_flash.o
- .debug_abbrev  0x00000ee7       0x14 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
- .debug_abbrev  0x00000efb      0x1d6 ./CMSIS/efm32tg/system_efm32tg.o
+.debug_abbrev   0x00000000      0xe0e
+ .debug_abbrev  0x00000000      0x13e ./src/SIRKA_Bootloader_DRA.o
+ .debug_abbrev  0x0000013e      0x10c ./src/boot.o
+ .debug_abbrev  0x0000024a       0xd7 ./src/crc.o
+ .debug_abbrev  0x00000321       0xda ./src/emu.o
+ .debug_abbrev  0x000003fb      0x152 ./src/init.o
+ .debug_abbrev  0x0000054d      0x13e ./src/irq.o
+ .debug_abbrev  0x0000068b      0x124 ./src/msc.o
+ .debug_abbrev  0x000007af      0x10c ./src/status.o
+ .debug_abbrev  0x000008bb       0xad ./src/timer.o
+ .debug_abbrev  0x00000968       0xf8 ./src/usart.o
+ .debug_abbrev  0x00000a60      0x105 ./src/watchdog.o
+ .debug_abbrev  0x00000b65       0xfd ./src/write_to_flash.o
+ .debug_abbrev  0x00000c62       0x14 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .debug_abbrev  0x00000c76      0x198 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_loc      0x00000000     0xbdd6
- .debug_loc     0x00000000       0x9a ./src/SIRKA_Bootloader_DRA.o
- .debug_loc     0x0000009a       0x49 ./src/boot.o
- .debug_loc     0x000000e3     0xb21d ./src/crc.o
- .debug_loc     0x0000b300       0x20 ./src/init.o
- .debug_loc     0x0000b320       0x40 ./src/irq.o
- .debug_loc     0x0000b360      0x45e ./src/msc.o
- .debug_loc     0x0000b7be      0x15c ./src/status.o
- .debug_loc     0x0000b91a       0x5f ./src/usart.o
- .debug_loc     0x0000b979       0xcd ./src/watchdog.o
- .debug_loc     0x0000ba46      0x27b ./src/write_to_flash.o
- .debug_loc     0x0000bcc1      0x115 ./CMSIS/efm32tg/system_efm32tg.o
+.debug_loc      0x00000000      0xaa4
+ .debug_loc     0x00000000       0xc8 ./src/SIRKA_Bootloader_DRA.o
+ .debug_loc     0x000000c8       0x70 ./src/boot.o
+ .debug_loc     0x00000138       0x70 ./src/crc.o
+ .debug_loc     0x000001a8       0x2c ./src/emu.o
+ .debug_loc     0x000001d4      0x140 ./src/init.o
+ .debug_loc     0x00000314       0xf4 ./src/irq.o
+ .debug_loc     0x00000408       0xe0 ./src/msc.o
+ .debug_loc     0x000004e8       0xa8 ./src/status.o
+ .debug_loc     0x00000590       0x84 ./src/timer.o
+ .debug_loc     0x00000614       0x9c ./src/usart.o
+ .debug_loc     0x000006b0       0x9c ./src/watchdog.o
+ .debug_loc     0x0000074c      0x170 ./src/write_to_flash.o
+ .debug_loc     0x000008bc      0x1e8 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_aranges  0x00000000      0x2d8
+.debug_aranges  0x00000000      0x308
  .debug_aranges
-                0x00000000       0x30 ./src/SIRKA_Bootloader_DRA.o
+                0x00000000       0x38 ./src/SIRKA_Bootloader_DRA.o
  .debug_aranges
-                0x00000030       0x28 ./src/boot.o
+                0x00000038       0x28 ./src/boot.o
  .debug_aranges
-                0x00000058       0x28 ./src/crc.o
+                0x00000060       0x28 ./src/crc.o
  .debug_aranges
-                0x00000080       0x20 ./src/emu.o
+                0x00000088       0x20 ./src/emu.o
  .debug_aranges
-                0x000000a0       0x48 ./src/init.o
+                0x000000a8       0x50 ./src/init.o
  .debug_aranges
-                0x000000e8       0x30 ./src/irq.o
+                0x000000f8       0x40 ./src/irq.o
  .debug_aranges
-                0x00000118       0x38 ./src/msc.o
+                0x00000138       0x38 ./src/msc.o
  .debug_aranges
-                0x00000150       0x30 ./src/status.o
+                0x00000170       0x30 ./src/status.o
  .debug_aranges
-                0x00000180       0x30 ./src/timer.o
+                0x000001a0       0x30 ./src/timer.o
  .debug_aranges
-                0x000001b0       0x30 ./src/usart.o
+                0x000001d0       0x30 ./src/usart.o
  .debug_aranges
-                0x000001e0       0x30 ./src/watchdog.o
+                0x00000200       0x30 ./src/watchdog.o
  .debug_aranges
-                0x00000210       0x48 ./src/write_to_flash.o
+                0x00000230       0x50 ./src/write_to_flash.o
  .debug_aranges
-                0x00000258       0x20 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+                0x00000280       0x20 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
  .debug_aranges
-                0x00000278       0x60 ./CMSIS/efm32tg/system_efm32tg.o
+                0x000002a0       0x68 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_ranges   0x00000000      0x1e8
- .debug_ranges  0x00000000       0x20 ./src/SIRKA_Bootloader_DRA.o
- .debug_ranges  0x00000020       0x18 ./src/boot.o
- .debug_ranges  0x00000038       0x18 ./src/crc.o
- .debug_ranges  0x00000050       0x10 ./src/emu.o
- .debug_ranges  0x00000060       0x38 ./src/init.o
- .debug_ranges  0x00000098       0x20 ./src/irq.o
- .debug_ranges  0x000000b8       0x28 ./src/msc.o
- .debug_ranges  0x000000e0       0x20 ./src/status.o
- .debug_ranges  0x00000100       0x20 ./src/timer.o
- .debug_ranges  0x00000120       0x20 ./src/usart.o
- .debug_ranges  0x00000140       0x20 ./src/watchdog.o
- .debug_ranges  0x00000160       0x38 ./src/write_to_flash.o
- .debug_ranges  0x00000198       0x50 ./CMSIS/efm32tg/system_efm32tg.o
+.debug_ranges   0x00000000      0x218
+ .debug_ranges  0x00000000       0x28 ./src/SIRKA_Bootloader_DRA.o
+ .debug_ranges  0x00000028       0x18 ./src/boot.o
+ .debug_ranges  0x00000040       0x18 ./src/crc.o
+ .debug_ranges  0x00000058       0x10 ./src/emu.o
+ .debug_ranges  0x00000068       0x40 ./src/init.o
+ .debug_ranges  0x000000a8       0x30 ./src/irq.o
+ .debug_ranges  0x000000d8       0x28 ./src/msc.o
+ .debug_ranges  0x00000100       0x20 ./src/status.o
+ .debug_ranges  0x00000120       0x20 ./src/timer.o
+ .debug_ranges  0x00000140       0x20 ./src/usart.o
+ .debug_ranges  0x00000160       0x20 ./src/watchdog.o
+ .debug_ranges  0x00000180       0x40 ./src/write_to_flash.o
+ .debug_ranges  0x000001c0       0x58 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_line     0x00000000     0x1a4d
- .debug_line    0x00000000      0x2d3 ./src/SIRKA_Bootloader_DRA.o
- .debug_line    0x000002d3      0x144 ./src/boot.o
- .debug_line    0x00000417      0x112 ./src/crc.o
- .debug_line    0x00000529      0x148 ./src/emu.o
- .debug_line    0x00000671      0x28f ./src/init.o
- .debug_line    0x00000900      0x1f5 ./src/irq.o
- .debug_line    0x00000af5      0x270 ./src/msc.o
- .debug_line    0x00000d65      0x207 ./src/status.o
- .debug_line    0x00000f6c      0x1da ./src/timer.o
- .debug_line    0x00001146      0x1df ./src/usart.o
- .debug_line    0x00001325      0x1d5 ./src/watchdog.o
- .debug_line    0x000014fa      0x241 ./src/write_to_flash.o
- .debug_line    0x0000173b       0x8f ./CMSIS/efm32tg/startup_gcc_efm32tg.o
- .debug_line    0x000017ca      0x283 ./CMSIS/efm32tg/system_efm32tg.o
+.debug_line     0x00000000     0x1a86
+ .debug_line    0x00000000      0x2b3 ./src/SIRKA_Bootloader_DRA.o
+ .debug_line    0x000002b3      0x149 ./src/boot.o
+ .debug_line    0x000003fc      0x10b ./src/crc.o
+ .debug_line    0x00000507      0x14e ./src/emu.o
+ .debug_line    0x00000655      0x2a6 ./src/init.o
+ .debug_line    0x000008fb      0x20d ./src/irq.o
+ .debug_line    0x00000b08      0x25c ./src/msc.o
+ .debug_line    0x00000d64      0x222 ./src/status.o
+ .debug_line    0x00000f86      0x1dd ./src/timer.o
+ .debug_line    0x00001163      0x1e1 ./src/usart.o
+ .debug_line    0x00001344      0x1e4 ./src/watchdog.o
+ .debug_line    0x00001528      0x239 ./src/write_to_flash.o
+ .debug_line    0x00001761       0x8f ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .debug_line    0x000017f0      0x296 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_str      0x00000000      0xbc8
- .debug_str     0x00000000      0x313 ./src/SIRKA_Bootloader_DRA.o
-                                0x359 (size before relaxing)
- .debug_str     0x00000313       0x78 ./src/boot.o
+.debug_str      0x00000000      0xbe0
+ .debug_str     0x00000000      0x279 ./src/SIRKA_Bootloader_DRA.o
+                                0x2ba (size before relaxing)
+ .debug_str     0x00000279       0x82 ./src/boot.o
                                 0x1e2 (size before relaxing)
- .debug_str     0x0000038b       0x51 ./src/crc.o
+ .debug_str     0x000002fb       0x51 ./src/crc.o
                                 0x189 (size before relaxing)
- .debug_str     0x000003dc       0x20 ./src/emu.o
+ .debug_str     0x0000034c       0x20 ./src/emu.o
                                 0x1d4 (size before relaxing)
- .debug_str     0x000003fc      0x39b ./src/init.o
-                                0x615 (size before relaxing)
- .debug_str     0x00000797       0x6f ./src/irq.o
-                                0x4ab (size before relaxing)
- .debug_str     0x00000806       0xec ./src/msc.o
+ .debug_str     0x0000036c      0x3cf ./src/init.o
+                                0x603 (size before relaxing)
+ .debug_str     0x0000073b       0x5b ./src/irq.o
+                                0x485 (size before relaxing)
+ .debug_str     0x00000796       0xec ./src/msc.o
                                 0x27d (size before relaxing)
- .debug_str     0x000008f2       0x47 ./src/status.o
-                                0x269 (size before relaxing)
- .debug_str     0x00000939        0xf ./src/timer.o
+ .debug_str     0x00000882       0x46 ./src/status.o
+                                0x257 (size before relaxing)
+ .debug_str     0x000008c8       0x35 ./src/timer.o
                                 0x1cd (size before relaxing)
- .debug_str     0x00000948       0x1e ./src/usart.o
+ .debug_str     0x000008fd       0x3c ./src/usart.o
                                 0x23f (size before relaxing)
- .debug_str     0x00000966       0x4d ./src/watchdog.o
+ .debug_str     0x00000939       0x4d ./src/watchdog.o
                                 0x1b6 (size before relaxing)
- .debug_str     0x000009b3       0x8c ./src/write_to_flash.o
-                                0x2b3 (size before relaxing)
- .debug_str     0x00000a3f      0x189 ./CMSIS/efm32tg/system_efm32tg.o
+ .debug_str     0x00000986       0xd1 ./src/write_to_flash.o
+                                0x265 (size before relaxing)
+ .debug_str     0x00000a57      0x189 ./CMSIS/efm32tg/system_efm32tg.o
                                 0x407 (size before relaxing)
 
-.debug_frame    0x00000000      0x5a0
- .debug_frame   0x00000000       0x5c ./src/SIRKA_Bootloader_DRA.o
- .debug_frame   0x0000005c       0x38 ./src/boot.o
- .debug_frame   0x00000094       0x30 ./src/crc.o
- .debug_frame   0x000000c4       0x20 ./src/emu.o
- .debug_frame   0x000000e4       0x78 ./src/init.o
- .debug_frame   0x0000015c       0x50 ./src/irq.o
- .debug_frame   0x000001ac       0x70 ./src/msc.o
- .debug_frame   0x0000021c       0x64 ./src/status.o
- .debug_frame   0x00000280       0x40 ./src/timer.o
- .debug_frame   0x000002c0       0x48 ./src/usart.o
- .debug_frame   0x00000308       0x48 ./src/watchdog.o
- .debug_frame   0x00000350       0xb0 ./src/write_to_flash.o
- .debug_frame   0x00000400       0xb8 ./CMSIS/efm32tg/system_efm32tg.o
- .debug_frame   0x000004b8       0x28 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
- .debug_frame   0x000004e0       0x28 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
- .debug_frame   0x00000508       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-fini.o)
- .debug_frame   0x00000534       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
- .debug_frame   0x00000560       0x20 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
- .debug_frame   0x00000580       0x20 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)
+.debug_frame    0x00000000      0x7a4
+ .debug_frame   0x00000000       0x84 ./src/SIRKA_Bootloader_DRA.o
+ .debug_frame   0x00000084       0x4c ./src/boot.o
+ .debug_frame   0x000000d0       0x48 ./src/crc.o
+ .debug_frame   0x00000118       0x28 ./src/emu.o
+ .debug_frame   0x00000140       0xc4 ./src/init.o
+ .debug_frame   0x00000204       0x9c ./src/irq.o
+ .debug_frame   0x000002a0       0x84 ./src/msc.o
+ .debug_frame   0x00000324       0x70 ./src/status.o
+ .debug_frame   0x00000394       0x58 ./src/timer.o
+ .debug_frame   0x000003ec       0x64 ./src/usart.o
+ .debug_frame   0x00000450       0x64 ./src/watchdog.o
+ .debug_frame   0x000004b4       0xe8 ./src/write_to_flash.o
+ .debug_frame   0x0000059c      0x120 ./CMSIS/efm32tg/system_efm32tg.o
+ .debug_frame   0x000006bc       0x28 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-__atexit2.o)
+ .debug_frame   0x000006e4       0x28 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-exit.o)
+ .debug_frame   0x0000070c       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-fini.o)
+ .debug_frame   0x00000738       0x2c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-init.o)
+ .debug_frame   0x00000764       0x20 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libc_s.a(lib_a-memset.o)
+ .debug_frame   0x00000784       0x20 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/../../../../arm-none-eabi/lib/armv7-m\libnosys.a(_exit.o)

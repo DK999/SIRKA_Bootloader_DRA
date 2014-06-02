@@ -62,7 +62,9 @@ void sendVerify(uint8_t check_value)
  * @brief  Main function
  *****************************************************************************/
 int main(void)
-{ uint8_t *boot_flag = (uint8_t*)0x380D;
+{ //VCMP->CTRL |= (0x1UL << 0);
+//  while(!(VCMP->STATUS & (0x1UL << 0)));
+  uint8_t *boot_flag = (uint8_t*)0x380D;
   /* Chip errata */
   CHIP_Init();
   Init_Clocks();
@@ -115,7 +117,11 @@ int main(void)
 	  									break;
 
 	  						case 0x02:	if(check_firmware())
-	  										BOOT_boot();
+	  									{
+	  										reset_bootflag();
+											BOOT_boot();
+	  									}
+
 	  									else
 	  										USART0_sendString("Firmware INVALID!!\n\r");
 	  									break;

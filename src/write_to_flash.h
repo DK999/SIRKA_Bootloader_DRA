@@ -19,6 +19,7 @@
 
 void flash_device();
 uint8_t check_firmware();
+void reset_bootflag();
 void get_nr_of_packages();
 void write_to_flash();
 void wait_for_package();
