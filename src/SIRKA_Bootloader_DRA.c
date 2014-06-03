@@ -12,7 +12,6 @@
  *****************************************************************************/
 #include "efm32tg110f32.h"
 #include "em_chip.h"
-#include "em_msc.h"
 #include "write_to_flash.h"
 #include "boot.h"
 #include "init.h"
@@ -43,7 +42,8 @@ void sendWelcomeMessage(void)
   USART0_sendString("Please enter a command: \r\n"
                     " 0x00 - Upload Firmware\r\n"
 		  	  	  	" 0x01 - Verify Firmware\r\n"
-		  	  	  	" 0x02 - Boot Firmware\r\n");
+		  	  	  	" 0x02 - Boot Firmware\r\n"
+		  	  	  	" 0x14 - Send Hello\r\n"  );
   GPIO->P[USART_CS_PORT].DOUTCLR = (1 << USART_CS_PIN);
   EMU->AUXCTRL = 0x1;
 }
