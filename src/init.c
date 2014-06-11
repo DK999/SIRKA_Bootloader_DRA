@@ -36,6 +36,9 @@ void Init_Clocks()
 	CMU->HFCORECLKEN0 = 0x4;
 	CMU->AUXHFRCOCTRL = 0xB3;
 
+	/* Write MSC unlock code to enable interface */
+	  MSC->LOCK = MSC_UNLOCK_CODE;
+
 }
 
 void Init_GPIO()

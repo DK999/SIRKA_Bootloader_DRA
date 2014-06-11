@@ -8,7 +8,8 @@
 
 #define FIRMWARE_START_ADDRESS 0x00004000
 #define FIRMWARE_HEADER_SIZE 0x100
- void BOOT_jump(uint32_t sp, uint32_t pc)
+#pragma GCC optimize ("O0")
+void __attribute ((noinline)) BOOT_jump(uint32_t sp, uint32_t pc)
 {
   (void) sp;
   (void) pc;

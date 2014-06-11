@@ -31,7 +31,7 @@ all: SIRKA_Bootloader_DRA.axf
 SIRKA_Bootloader_DRA.axf: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GNU ARM C Linker'
-	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m3 -mthumb  --specs=nano.specs -Xlinker --gc-sections -Xlinker -Map="SIRKA_Bootloader_DRA.map" -T "C:\SiliconLabs\SimplicityStudio\v2\workspace\SIRKA_Bootloader_DRA\GNU ARM 4.7.3 - Release\SIRKA_Bootloader_DMA_8KB.ld" -o SIRKA_Bootloader_DRA.axf "./src/SIRKA_Bootloader_DRA.o" "./src/boot.o" "./src/crc.o" "./src/emu.o" "./src/init.o" "./src/irq.o" "./src/msc.o" "./src/status.o" "./src/timer.o" "./src/usart.o" "./src/watchdog.o" "./src/write_to_flash.o" "./emlib/em_system.o" "./CMSIS/efm32tg/startup_gcc_efm32tg.o" "./CMSIS/efm32tg/system_efm32tg.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
+	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m3 -mthumb  --specs=nano.specs -Xlinker --gc-sections -Xlinker -Map="SIRKA_Bootloader_DRA.map" -T "C:\Users\Diablokiller999\git\SIRKA_Bootloader_DRA\GNU ARM 4.7.3 - Release\SIRKA_Bootloader_DMA_8KB.ld" -o SIRKA_Bootloader_DRA.axf "./src/SIRKA_Bootloader_DRA.o" "./src/boot.o" "./src/crc.o" "./src/emu.o" "./src/init.o" "./src/irq.o" "./src/msc.o" "./src/status.o" "./src/timer.o" "./src/usart.o" "./src/watchdog.o" "./src/write_to_flash.o" "./emlib/em_system.o" "./CMSIS/efm32tg/startup_gcc_efm32tg.o" "./CMSIS/efm32tg/system_efm32tg.o" -Wl,--start-group -lgcc -lc -lnosys -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
