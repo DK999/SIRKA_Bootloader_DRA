@@ -63,7 +63,7 @@ void sendVerify(uint8_t check_value)
 int main(void)
 { //VCMP->CTRL |= (0x1UL << 0);
 //  while(!(VCMP->STATUS & (0x1UL << 0)));
-  uint8_t *boot_flag = (uint8_t*)0x380D;
+  uint8_t *boot_flag = (uint8_t*)0x3807;
   /* Chip errata */
   CHIP_Init();
   Init_Clocks();

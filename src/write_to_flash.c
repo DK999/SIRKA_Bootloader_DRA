@@ -27,12 +27,8 @@ uint16_t nr_of_packages = 0;                                    // Stores number
 
 extern uint8_t received_frame[14];                              // Reveived frame by USART
 extern short frame_position;                                    // Points at current frame position
-uint8_t *sirka_address = (uint8_t*)0x3800;
-uint8_t *acc_res = (uint8_t*)0x3801;
-uint8_t *gyro_res = (uint8_t*)0x3802;
-uint8_t *mag_res = (uint8_t*)0x3803;
-uint16_t *crc_pack = (uint16_t*)0x3804;
-uint32_t *file_size = (uint32_t*)0x3806;
+uint16_t *crc_pack = (uint16_t*)0x3800;
+uint32_t *file_size = (uint32_t*)0x3802;
 
 
 /* Flash routine */
@@ -71,14 +67,12 @@ void flash_device()
         if(check_crc())
         {       address = 0x3800;
                 /* Delete preamble, overwrite with SIRKA information */
-                received_frame[0] = *sirka_address;
-                received_frame[1] = *acc_res;
-                received_frame[2] = *gyro_res;
-                received_frame[3] = *mag_res;
+        		for ( int j = 0; j < 8; j++)
+                received_frame[j] = received_frame[j+4];
                 /* Erase Flash-Page */
                 ErasePage(address);
                 /* Write CRC and FW length */
-                WriteWord(address,&received_frame,12);
+                WriteWord(address,&received_frame,8);
         }
         /* disable watchdog */
         WDOG_Enable(false);
@@ -107,26 +101,19 @@ uint8_t check_firmware()
 
 void reset_bootflag()
 {       /* Create array, store SIRKA config and Firmware Info, reset Bootloader Flag */
-		uint8_t config[16];                     // Array for config of device
+		uint8_t config[8];                     // Array for config of device
         address = 0x3800;                       // Location for Data to be stored
-        config[0] = *sirka_address;             // SIRKA Address
-        config[1] = *acc_res;                   // SIRKA ACC Resolution
-        config[2] = *gyro_res;                  // SIRKA Gyro Resolution
-        config[3] = *mag_res;                   // SIRKA Magnet resolution
-        config[4] = (uint8_t)*crc_pack;         // CRC Low Byte
-        config[5] = (uint8_t)(*crc_pack>>8);    // CRC High Byte
-        config[6] = (uint8_t)*file_size;        // Filesize Byte 0
-        config[7] = (uint8_t)(*file_size>>8);   // Filesize Byte 1
-        config[8] = (uint8_t)(*file_size>>16);  // Filesize Byte 2
-        config[9] = (uint8_t)(*file_size>>24);  // Filesize Byte 3
-        config[10]= 0xFF;                       // Crap
-        config[11]= 0xFF;                       // Crap
-        config[12]= 0x01;                       // Firmware valid flag
-        config[13]= 0x00;                       // Bootloader Flag
-        config[14]= 0x00;                       // Crap
-        config[15]= 0x00;                       // Crap
+        config[0] = (uint8_t)*crc_pack;         // CRC Low Byte
+        config[1] = (uint8_t)(*crc_pack>>8);    // CRC High Byte
+        config[2] = (uint8_t)*file_size;        // Filesize Byte 0
+        config[3] = (uint8_t)(*file_size>>8);   // Filesize Byte 1
+        config[4] = (uint8_t)(*file_size>>16);  // Filesize Byte 2
+        config[5] = (uint8_t)(*file_size>>24);  // Filesize Byte 3
+        config[6]= 0x01;                       // Firmware valid flag
+        config[7]= 0x00;                       // Bootloader Flag
+
         ErasePage(address);
-        WriteWord(address,&config,16);
+        WriteWord(address,&config,8);
 }
 void get_nr_of_packages()
 {       /* Wait for package */

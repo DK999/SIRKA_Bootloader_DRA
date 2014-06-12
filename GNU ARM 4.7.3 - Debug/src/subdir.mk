@@ -11,6 +11,7 @@ C_SRCS += \
 ../src/init.c \
 ../src/irq.c \
 ../src/msc.c \
+../src/status.c \
 ../src/timer.c \
 ../src/usart.c \
 ../src/watchdog.c \
@@ -24,6 +25,7 @@ OBJS += \
 ./src/init.o \
 ./src/irq.o \
 ./src/msc.o \
+./src/status.o \
 ./src/timer.o \
 ./src/usart.o \
 ./src/watchdog.o \
@@ -37,6 +39,7 @@ C_DEPS += \
 ./src/init.d \
 ./src/irq.d \
 ./src/msc.d \
+./src/status.d \
 ./src/timer.d \
 ./src/usart.d \
 ./src/watchdog.d \
@@ -90,6 +93,13 @@ src/msc.o: ../src/msc.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GNU ARM C Compiler'
 	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m3 -mthumb '-DEFM32TG110F32=1' '-DDEBUG=1' -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/CMSIS/Include" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/kits/common/bsp" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/emlib/inc" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/kits/common/drivers" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include" -O0 -Wall -c -fmessage-length=0 -mno-sched-prolog -fno-builtin -ffunction-sections -fdata-sections -std=c99 -MMD -MP -MF"src/msc.d" -MT"src/msc.o" -o "$@" "$<"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+src/status.o: ../src/status.c
+	@echo 'Building file: $<'
+	@echo 'Invoking: GNU ARM C Compiler'
+	arm-none-eabi-gcc -g -gdwarf-2 -mcpu=cortex-m3 -mthumb '-DEFM32TG110F32=1' '-DDEBUG=1' -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/CMSIS/Include" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/kits/common/bsp" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/emlib/inc" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/kits/common/drivers" -I"C:\SiliconLabs\SimplicityStudio\v2\developer\sdks\efm32\v2/Device/EnergyMicro/EFM32TG/Include" -O0 -Wall -c -fmessage-length=0 -mno-sched-prolog -fno-builtin -ffunction-sections -fdata-sections -std=c99 -MMD -MP -MF"src/status.d" -MT"src/status.o" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
