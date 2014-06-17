@@ -4,7 +4,7 @@
  * @author Budelmann Elektronik
  * @version 1.0
  ******************************************************************************
- * @section License ba
+ * @section License
  * <b>(C) Copyright 2012 Energy Micro AS, http://www.energymicro.com</b>
  *******************************************************************************
  *
