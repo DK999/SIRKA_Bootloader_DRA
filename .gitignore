@@ -1,2 +1,5 @@
 /GNU ARM 4.7.3 - Debug/
 /GNU ARM 4.7.3 - Release/
+*.o
+*.d
+*.ld
