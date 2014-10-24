@@ -17,6 +17,9 @@ void enable_interrupts(void)
 	NVIC_ClearPendingIRQ(USART0_RX_IRQn);
 	NVIC_EnableIRQ(USART0_RX_IRQn);
 	USART0->IEN |= USART_IEN_RXDATAV;
+
+	TIMER0->IEN = 0x1;
+	NVIC_EnableIRQ(TIMER0_IRQn);              // Enable TIMER0 interrupt vector in NVIC
 }
 /* saves received byte in 'received_frame'
  * increments frame_position after each byte

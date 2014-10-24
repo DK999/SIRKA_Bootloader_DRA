@@ -18,10 +18,23 @@
 
 void Init_USART0()
 {
-   COM_USART->CLKDIV = 0x100;
-   COM_USART->CMD = (1 << 11) | (1 << 10) | (1 << 2) | (1 << 0);
-   COM_USART->IFC = 0x1FF9;
-   COM_USART->ROUTE = 0x303;
+	/*
+	 * Geschwindigkeiten für USART
+	 * CLKDIV -> 0x100 = 1MBit/s	16x OVS
+	 * CLKDIV -> 0x40 = 1,5MBit/s	16x OVS
+	 * CLKDIV -> 0x0 = 2MBit/s		16x OVS
+	 *
+	 * CLKDIV -> 0x100 = 2MBit/s 	8x OVS
+	 * CLKDIV -> 0x0 = 4MBit/s 		8xOVS
+	 *
+	 * CLKDIV -> 0x300 = 2MBit/s 	4xOVS
+	 * CLKDIV -> 0x0 = 8MBit/s		4xOVS
+	 */
+	COM_USART->CLKDIV = 0x300;
+	COM_USART->CMD = (1 << 11) | (1 << 10) | (1 << 2) | (1 << 0);	// CSMA | MSBF | CCEN | ASYNC
+	COM_USART->CTRL |= ( 3 << 5 );	// Oversampling 0 = 16x; 1 = 8x; 2 = 6x; 3 = 4x
+	COM_USART->IFC = 0x1FF9;
+	COM_USART->ROUTE = 0x303;
 }
 
 void Init_Clocks()
@@ -59,10 +72,7 @@ void Init_WD()
 void Init_TIMER0()
 {
 	TIMER0->CTRL = 0x40;
-	TIMER0->TOP = 0x1900;
-	TIMER0->IEN = 0x1;
-	NVIC_EnableIRQ(TIMER0_IRQn);              // Enable TIMER0 interrupt vector in NVIC
-
+	TIMER0->TOP = 0x3C0;		// 30µs , former 0x1900
 }
 
 void Init_Interrupts(void)
