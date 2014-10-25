@@ -27,8 +27,9 @@ void enable_interrupts(void)
  */
 void USART0_RX_IRQHandler(void)
 {
-	if(frame_position == 0)			// Start Timer when receiving first IRQ
-			TIMER_start();
+	TIMER_stop();
+	//	if(frame_position == 0)			// Start Timer when receiving first IRQ
+	TIMER_start();
 	received_frame[frame_position++] = USART0->RXDATA;
 	if(frame_position == received_frame[2])				// if full frame received deactivate timer
 	{

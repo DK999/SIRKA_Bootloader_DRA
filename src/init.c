@@ -72,7 +72,7 @@ void Init_WD()
 void Init_TIMER0()
 {
 	TIMER0->CTRL = 0x40;
-	TIMER0->TOP = 0x3C0;		// 30µs , former 0x1900
+	TIMER0->TOP = 0x140;		// 60µs , former 0x1900
 }
 
 void Init_Interrupts(void)
