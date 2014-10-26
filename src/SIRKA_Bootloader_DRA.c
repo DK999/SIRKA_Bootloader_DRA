@@ -30,12 +30,12 @@
 #define CRCL 6
 #define CRCH 7
 
-volatile uint8_t received_frame[14];
+volatile uint8_t received_frame[30];
 volatile short frame_position;
 void sendWelcomeMessage(void)
 { GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);
   if (RMU->RSTCAUSE & (0x01 << 4))
-	USART0_sendString("WATCHDOG triggered! Error on transmit\r\n\r\n");
+	USART0_sendString("WATCHDOG triggered!\r\n\r\n");
 
   USART0_sendString("SIRKA Bootloader 1.0\r\n");
 
@@ -61,8 +61,7 @@ void sendVerify(uint8_t check_value)
  * @brief  Main function
  *****************************************************************************/
 int main(void)
-{ //VCMP->CTRL |= (0x1UL << 0);
-//  while(!(VCMP->STATUS & (0x1UL << 0)));
+{
   uint8_t *boot_flag = (uint8_t*)0x3807;
   /* Chip errata */
   CHIP_Init();
