@@ -30,7 +30,7 @@
 #define CRCL 6
 #define CRCH 7
 
-volatile uint8_t received_frame[30];
+volatile uint8_t received_frame[40];
 volatile short frame_position;
 void sendWelcomeMessage(void)
 { GPIO->P[USART_CS_PORT].DOUTSET = (1 << USART_CS_PIN);

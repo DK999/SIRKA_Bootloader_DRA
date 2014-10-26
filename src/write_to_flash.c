@@ -25,7 +25,7 @@
 uint32_t address = 0x4000;                                              // Stores address for flash writing
 uint16_t nr_of_packages = 0;                                    // Stores number of packages
 
-extern uint8_t received_frame[30];                              // Reveived frame by USART
+extern uint8_t received_frame[40];                              // Reveived frame by USART
 extern short frame_position;                                    // Points at current frame position
 uint16_t *crc_pack = (uint16_t*)0x3800;
 uint32_t *file_size = (uint32_t*)0x3802;
@@ -67,12 +67,12 @@ void flash_device()
         if(check_crc())
         {       address = 0x3800;
                 /* Delete preamble, overwrite with SIRKA information */
-        		for ( int j = 0; j < 16; j++)
+        		for ( int j = 0; j < 32; j++)
                 received_frame[j] = received_frame[j+4];
                 /* Erase Flash-Page */
                 ErasePage(address);
                 /* Write CRC and FW length */
-                WriteWord(address,&received_frame,16);
+                WriteWord(address,&received_frame,32);
         }
         /* disable watchdog */
         WDOG_Enable(false);
@@ -130,15 +130,15 @@ void get_nr_of_packages()
 /* Writes to flash */
 void write_to_flash()
 {       /* Delete preamble, overwrite with information */
-        for ( int j = 0; j < 16; j++)
+        for ( int j = 0; j < 32; j++)
         received_frame[j] = received_frame[j+4];
         /* Delete new page of flash before writing ( Page-Size is 512 Byte ) */
         if ( address == 0x4000 || address % 0x200 == 0 )
                         ErasePage(address);
         /* Write Data to flash */
-        WriteWord(address,&received_frame,16);
+        WriteWord(address,&received_frame,32);
         /* Increment address by 8 Byte */
-        address+=0x10;
+        address+=0x20;
 }
 /* Waits for package in energymode 1
  * Controlled by interrupt via USART

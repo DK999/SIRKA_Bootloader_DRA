@@ -20,7 +20,7 @@ Common symbol       size              file
 
 frame_position      0x2               ./src/SIRKA_Bootloader_DRA.o
 SystemCoreClock     0x4               ./CMSIS/efm32tg/system_efm32tg.o
-received_frame      0x1e              ./src/SIRKA_Bootloader_DRA.o
+received_frame      0x28              ./src/SIRKA_Bootloader_DRA.o
 crcTable            0x200             ./src/crc.o
 
 Discarded input sections
@@ -468,7 +468,7 @@ LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/
 .igot.plt       0x20000378        0x0 load address 0x00000eb0
  .igot.plt      0x00000000        0x0 c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
 
-.bss            0x20000378       0x3e load address 0x00000eb0
+.bss            0x20000378       0x48 load address 0x00000eb0
                 0x20000378                __bss_start__ = .
  *(.bss*)
  .bss           0x20000378       0x1c c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/bin/../lib/gcc/arm-none-eabi/4.7.3/armv7-m/crtbegin.o
@@ -476,22 +476,22 @@ LOAD c:/siliconlabs/simplicitystudio/v2/developer/toolchains/gnu_arm/4.7_2013q1/
                 0x20000394        0x2 ./src/write_to_flash.o
                 0x20000394                nr_of_packages
  *(COMMON)
- COMMON         0x20000396       0x20 ./src/SIRKA_Bootloader_DRA.o
+ COMMON         0x20000396       0x2a ./src/SIRKA_Bootloader_DRA.o
                 0x20000396                frame_position
                 0x20000398                received_frame
-                0x200003b6                __bss_end__ = .
+                0x200003c0                __bss_end__ = .
 
-.heap           0x200003b8        0x0
-                0x200003b8                __end__ = .
-                0x200003b8                end = __end__
-                0x200003b8                _end = __end__
+.heap           0x200003c0        0x0
+                0x200003c0                __end__ = .
+                0x200003c0                end = __end__
+                0x200003c0                _end = __end__
  *(.heap*)
- .heap          0x200003b8        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
-                0x200003b8                __HeapLimit = .
+ .heap          0x200003c0        0x0 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+                0x200003c0                __HeapLimit = .
 
-.stack_dummy    0x200003b8      0x400
+.stack_dummy    0x200003c0      0x400
  *(.stack)
- .stack         0x200003b8      0x400 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .stack         0x200003c0      0x400 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
                 0x20001000                __StackTop = (ORIGIN (RAM) + 0x1000)
                 0x20000c00                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x20001000                PROVIDE (__stack, __StackTop)
@@ -569,7 +569,7 @@ OUTPUT(SIRKA_Bootloader_DRA.axf elf32-littlearm)
  .comment       0x00000000       0x71 ./src/write_to_flash.o
  .comment       0x00000000       0x71 ./CMSIS/efm32tg/system_efm32tg.o
 
-.debug_info     0x00000000     0x356c
+.debug_info     0x00000000     0x356e
  .debug_info    0x00000000      0x59f ./src/SIRKA_Bootloader_DRA.o
  .debug_info    0x0000059f      0x301 ./src/boot.o
  .debug_info    0x000008a0      0x14e ./src/crc.o
@@ -581,9 +581,9 @@ OUTPUT(SIRKA_Bootloader_DRA.axf elf32-littlearm)
  .debug_info    0x00002409      0x21d ./src/timer.o
  .debug_info    0x00002626      0x29a ./src/usart.o
  .debug_info    0x000028c0      0x1dd ./src/watchdog.o
- .debug_info    0x00002a9d      0x4b0 ./src/write_to_flash.o
- .debug_info    0x00002f4d       0x99 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
- .debug_info    0x00002fe6      0x586 ./CMSIS/efm32tg/system_efm32tg.o
+ .debug_info    0x00002a9d      0x4b2 ./src/write_to_flash.o
+ .debug_info    0x00002f4f       0x99 ./CMSIS/efm32tg/startup_gcc_efm32tg.o
+ .debug_info    0x00002fe8      0x586 ./CMSIS/efm32tg/system_efm32tg.o
 
 .debug_abbrev   0x00000000     0x10c6
  .debug_abbrev  0x00000000      0x1b1 ./src/SIRKA_Bootloader_DRA.o
